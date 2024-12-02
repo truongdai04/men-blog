@@ -1,0 +1,77 @@
+/* Cấu trúc chung */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9; /* Nền trang */
+  color: #333; /* Màu chữ mặc định */
+}
+
+/* Logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+/* Hiệu ứng hover cho logo */
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa); /* Màu hiệu ứng hover mặc định */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa); /* Màu hiệu ứng hover khi lớp .react */
+}
+
+/* Hiệu ứng quay logo khi không bật tính năng giảm chuyển động */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tính năng giảm chuyển động */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card */
+.card {
+  padding: 2em;
+  background-color: #ffffff; /* Nền trắng cho card */
+  color: #444; /* Màu chữ trong card */
+  border-radius: 8px; /* Bo góc cho card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng bóng */
+}
+
+/* Liên kết: sửa màu và hiệu ứng hover */
+a {
+  color: #0066cc; /* Màu chữ của liên kết */
+  text-decoration: none; /* Bỏ gạch chân mặc định */
+}
+
+a:hover {
+  color: #0044aa; /* Màu chữ của liên kết khi hover */
+  text-decoration: underline; /* Gạch chân khi hover */
+}
+
+/* Phần tử "read-the-docs" */
+.read-the-docs {
+  color: #888; /* Màu chữ nhạt cho phần này */
+  background-color: #f0f0f0; /* Nền nhẹ cho phần này */
+  padding: 1rem;
+  border-radius: 4px; /* Bo góc nhẹ */
+  font-size: 1rem;
+}
+
+/* Nếu cần đặt màu nền cho #root */
+#root {
+  background-color: #fafafa; /* Nền sáng cho toàn bộ trang */
+}
